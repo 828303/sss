@@ -1,0 +1,210 @@
+<html>
+<head><head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <style>
+           body{background-color: darkmagenta;}
+       .navbar {
+         overflow: hidden;
+         font-family: Arial, Helvetica, sans-serif;
+       }
+       
+       .navbar a {
+         float: left;
+         font-size: 16px;
+         color: gold;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+       }
+       
+       .dropdown {
+         float: left;
+         overflow: hidden;
+       }
+       
+       .dropdown .dropbtn {
+         font-size: 16px;  
+         border: none;
+         outline: none;
+         color: gold;
+         padding: 14px 16px;
+         background-color: inherit;
+         font-family: inherit;
+         margin: 0;
+       }
+       
+       .navbar a:hover, .dropdown:hover .dropbtn { border-bottom: 3px solid gold;
+       }
+       
+       .dropdown-content {
+         display: none;
+         position: absolute;
+        
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px darkmagenta(0,0,0,0.2);
+         z-index: 1;
+       }
+       
+       .dropdown-content a {
+         float: none;
+         color: darkmagenta;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         text-align: left;
+       }
+       
+       .dropdown-content a:hover { border-bottom: 3px solid gold
+       ;}
+       
+       .dropdown:hover .dropdown-content {
+         display: block;
+       }
+       </style>
+       </head>
+       <body>
+       
+       <div class="navbar">
+         <a href="TehillahSongs.html">TehillahSongs</a>
+         <a href="About.html">About Us</a>
+         <a href="Contacts.html">Contact Us</a>
+         <div class="dropdown">
+           <button class="dropbtn">Media 
+             <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-content">
+             <a href="Galleryz.html">Gallery</a>
+             <a href="Videos.html">Videos</a>
+             <a href="#">Extras</a>
+           </div>
+         </div> 
+       </div> <br><br><br>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2 style="color:white;border-bottom: 3px solid gold;">Images</h2>
+</div>
+
+<!-- The  columns -->
+<div class="row">
+  <div class="column">
+    <img src="Tehillah.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Pstage.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="dancers.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="onStage.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+  <img src="Tehillah.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Pstage.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+        <img src="Tehillah.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+                <img src="Tehillah.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                </div>
+</div>
+<div class="row">
+        <div class="column">
+          <img src="Tehillah.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="Pstage.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="Tehillah.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="Pstage.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        </div>
+        
+    </div>
+      
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:90%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
